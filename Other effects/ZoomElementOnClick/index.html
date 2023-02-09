@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Hello, world!</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/fontawesome-all.min.js"></script>
+
+</head>
+
+<body>
+
+  <div id="fullscreen">
+    <h2>Example</h2>
+    <p>Your browser <span id="support">doesn't support</span> FullScreen API.</p>
+    <p>This block is <span id="state">not</span> in fullscreen mode. <a href="#" class="requestfullscreen">Click to
+        open it in fullscreen</a><a href="#" class="exitfullscreen" style="display: none">Click to exit fullscreen</a>.</p>
+  </div>
+
+  dlkfjdkl jkdjf dkfjd flk
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.fullscreen-0.4.1.min.js"></script>
+  <script>
+    $(function () {
+      // check native support
+      $('#support').text($.fullscreen.isNativelySupported() ? 'supports' : 'doesn\'t support');
+      // open in fullscreen
+      $('#fullscreen .requestfullscreen').click(function () {
+        $('#fullscreen').fullscreen();
+        return false;
+      });
+      // exit fullscreen
+      $('#fullscreen .exitfullscreen').click(function () {
+        $.fullscreen.exit();
+        return false;
+      });
+      // document's event
+      $(document).bind('fscreenchange', function (e, state, elem) {
+        // if we currently in fullscreen mode
+        if ($.fullscreen.isFullScreen()) {
+          $('#fullscreen .requestfullscreen').hide();
+          $('#fullscreen .exitfullscreen').show();
+        } else {
+          $('#fullscreen .requestfullscreen').show();
+          $('#fullscreen .exitfullscreen').hide();
+        }
+
+        $('#state').text($.fullscreen.isFullScreen() ? '' : 'not');
+      });
+    });
+    $(function () {
+      $('.example').each(function () {
+        var $el = $(this);
+
+        $el.find('code').text($el.find('script').text().replace(/\n\t\t\t\t/gm, '\n').replace(/^\n/gm, ''));
+      });
+    });
+  </script>
+
+</body>
+
+</html>

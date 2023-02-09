@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>StartUp</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+    <style type="text/css">
+        .auto-pop .modal-content {border-radius: 0;}
+        .pop-btn{padding: 10px 30px; border-radius: 4px; color: #fff; background: linear-gradient(#d7005d, #c32b6d); margin: 0 auto; display: table;}
+        .pop-btn:hover {text-decoration: none; color: #fff;}
+        .auto-pop .modal-body{padding: 0 !important;}
+        .auto-pop .modal-body input {padding: 5px 10px; border: 1px solid #ddd; border-radius: 4px; width: 65%;}
+        .subs-bt{background:#d7005d; color:#fff; margin-left: 10px; width: 30% !important; border: 0 !important;}
+        .under-body {padding: 10px; text-align: center;}
+        .offer-heading {text-align: center; font-size: 24px;}
+    </style>
+  </head>
+  <body>
+
+
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#memberModal">Open Modal</button>
+
+<!-- Modal -->
+<div class="modal fade auto-pop" id="memberModal" tabindex="-1" role="dialog" aria-labelledby="memberModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4>Heading</h4>
+            </div>
+            <div class="modal-body">
+            
+                <div class="add-image"><img src="images/pop-bg.png" class="img-responsive"></div>
+                <div class="under-body">
+<!--                     <p class="offer-heading"><i><b>Save upto 20%</b></i></p> -->
+                    <input type="text" name="" placeholder="subscribe">
+                    <input type="submit" class="subs-bt" value="subscribe">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script type="text/javascript">
+    $(document).ready(function() {
+    // var isshow = localStorage.getItem('isshow');
+    // if (isshow== null) { // for one time open per visitor
+    // localStorage.setItem('isshow', 0);
+    // // Show popup here
+    //  $('#memberModal').modal('show'); 
+    // }
+    if (sessionStorage.clickcount) {
+    sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+} else {
+    sessionStorage.clickcount = 1;
+    $('#memberModal').modal('show'); 
+}
+   });    
+</script>
+</body>
+</html>

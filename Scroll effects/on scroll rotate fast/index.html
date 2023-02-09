@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>StartUp</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <style type="text/css">
+        .gear{width: 101px; height: 102px;}
+    </style>
+  </head>
+  <body>
+
+  <div class="gear"><img src="http://i.imgur.com/zZ3fMuh.png"></div>
+
+  <div style="height: 800px;"></div>
+  
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script type="text/javascript">
+        $(function() {
+            var rotation = 0, 
+                scrollLoc = $(document).scrollTop();
+            $(window).scroll(function() {
+                var newLoc = $(document).scrollTop();
+                var diff = scrollLoc - newLoc;
+                rotation += diff, scrollLoc = newLoc;
+                var rotationStr = "rotate(" + rotation + "deg)";
+                $(".gear").css({
+                    "-webkit-transform": rotationStr,
+                    "-moz-transform": rotationStr,
+                    "transform": rotationStr
+                });
+            });
+        })
+    </script>
+  </body>
+</html>

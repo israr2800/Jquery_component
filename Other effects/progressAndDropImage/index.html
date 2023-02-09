@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="styles/custom.css">
+    <script defer src="js/fontawesome-all.min.js"></script>
+    <!-- DROP AND DRAG INPUT -->
+    <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
+    <!-- DROP AND DRAG INPUT END -->
+    <title>Hello, world!</title>
+
+</head>
+
+<body class="bg-gray">
+
+
+    <!-- PROGRESS BAR -->
+    <div class="container">
+        <div class="row bg-white box-shadow mb-3 p-3">
+            <div class="col-lg-12">
+                <div id="myProgress">
+                    <div id="myBar">10%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- PROGRESS BAR END -->
+    <!-- DROP AND DRAG INPUT -->
+    <div class="container">
+        <div class="row bg-white box-shadow mb-3 p-3">
+            <div class="col-lg-12">
+                <form action="/file-upload" class="dropzone">
+                    <div class="fallback">
+                        <input name="file" type="file" multiple />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- DROP AND DRAG INPUT END -->
+    <div class="container">
+        <div class="row bg-white box-shadow mb-3 p-3">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                <div class="folder-wrapper">
+                    <div class="folder">
+                        <div class="w-100">
+                            <p class="folder-file">2 Images</p>
+                            <p class="folder-size"><small>15 MB</small></p>
+                        </div>
+                    </div>
+                    <p class="folder-name">Israr's Folder</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                <div class="folder-wrapper">
+                    <div class="folder">
+                        <div class="w-100">
+                            <p class="folder-file">2 Images</p>
+                            <p class="folder-size"><small>15 MB</small></p>
+                        </div>
+                    </div>
+                    <p class="folder-name">Israr's Folder</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                <div class="folder-wrapper">
+                    <div class="folder">
+                        <div class="w-100">
+                            <p class="folder-file">2 Images</p>
+                            <p class="folder-size"><small>15 MB</small></p>
+                        </div>
+                    </div>
+                    <p class="folder-name">Israr's Folder</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                <div class="folder-wrapper">
+                    <div class="folder">
+                        <div class="w-100">
+                            <p class="folder-file">2 Images</p>
+                            <p class="folder-size"><small>15 MB</small></p>
+                        </div>
+                    </div>
+                    <p class="folder-name">Israr's Folder</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                <div class="folder-wrapper">
+                    <div class="folder">
+                        <div class="w-100">
+                            <p class="folder-file">2 Images</p>
+                            <p class="folder-size"><small>15 MB</small></p>
+                        </div>
+                    </div>
+                    <p class="folder-name">Israr's Folder</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                <div class="folder-wrapper">
+                    <div class="folder">
+                        <div class="w-100">
+                            <p class="folder-file">2 Images</p>
+                            <p class="folder-size"><small>15 MB</small></p>
+                        </div>
+                    </div>
+                    <p class="folder-name">Israr's Folder</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                <div class="folder-wrapper">
+                    <div class="folder">
+                        <div class="w-100">
+                            <p class="folder-file">2 Images</p>
+                            <p class="folder-size"><small>15 MB</small></p>
+                        </div>
+                    </div>
+                    <p class="folder-name">Israr's Folder</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="scripts/jquery-3.4.1.min.js"></script>
+<script src="scripts/bootstrap.bundle.min.js"></script>
+<script src="scripts/custom.js"></script>
+<!-- PROGRESSBAR END -->
+<script>
+    $(document).ready(function () {
+        var i = 0;
+        if (i == 0) {
+            i = 1;
+            var elem = document.getElementById("myBar");
+            var width = 10;
+            var id = setInterval(frame, 100);
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
+                    i = 0;
+                } else {
+                    width++;
+                    elem.style.width = width + "%";
+                    elem.innerHTML = width + "%";
+                }
+            }
+        }
+    }); 
+</script>
+<!-- PROGRESSBAR END -->
+
+<!-- DROP AND DRAG INPUT -->
+<script src="scripts/dropzone.js"></script>
+<!-- DROP AND DRAG INPUT END -->
+
+
+</body>
+
+</html>

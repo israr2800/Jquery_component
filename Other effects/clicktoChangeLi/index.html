@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/fontawesome-all.min.js"></script>
+
+  <title>Hello, world!</title>
+  <style>
+    .selected {
+      display: block;
+    }
+
+    ul li {
+      display: none;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <ul id="">
+    <li id="">
+      1
+    </li>
+    <li id="">2</li>
+    <li id="">3</li>
+    <li id="">4</li>
+    <li id="">5</li>
+    <li id="">6</li>
+    <li id="">7</li>
+  </ul>
+
+  <button id="prev">Previous</button>
+  <button id="next">Next</button>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <script>
+
+    // showing first li (by me)
+    $(document).ready(function () {
+      $('ul li:first').addClass('selected');
+    });
+    // showing first li end 
+
+
+    var $first = $('li:first', 'ul'),
+      $last = $('li:last', 'ul');
+    $("#next").click(function () {
+      var $next, $selected = $(".selected");
+
+
+      $next = $selected.next('li').length > 0 ? $selected.next('li') : $first;
+      $selected.removeClass("selected");
+      $next.addClass('selected');
+    });
+
+    $("#prev").click(function () {
+      var $prev, $selected = $(".selected");
+
+      $prev = $selected.prev('li').length ? $selected.prev('li') : $last;
+      $selected.removeClass("selected");
+      $prev.addClass('selected');
+    });
+
+  </script>
+
+</body>
+
+</html>

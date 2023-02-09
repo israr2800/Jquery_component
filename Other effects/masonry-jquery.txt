@@ -1,0 +1,46 @@
+// https://masonry.desandro.com/
+
+//Add both js files:
+https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js
+https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js
+
+<div class="grid">
+  <div class="grid-item">image here</div>
+  <div class="grid-item">image here</div>
+  <div class="grid-item">image here</div>
+</div>
+
+.grid-item {
+    padding: 5px;
+    
+    @media screen and (min-width: 992px) {
+        width: 25%;
+    }
+    @media screen and (max-width: 991px) {
+        width: 33.33%;
+    }
+    @media screen and (max-width: 768px) {
+        width: 50%;
+    }
+    @media screen and (max-width: 767px) {
+        width: 50%;
+    }
+    img {
+        max-width: 100%;
+    }
+}
+
+
+$(function(){
+
+    var grid =  (<any> $('.grid')).masonry({
+          itemSelector: '.grid-item',
+          resize: true
+        });
+
+        grid.imagesLoaded().progress( function() {
+          grid.masonry('layout');
+        });
+
+
+    })

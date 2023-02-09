@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+    <title>Comnpany Name</title>
+
+    <style>
+        .width-250 {width: 250px; min-width: 250px; max-width: 250px;}
+    </style>
+</head>
+
+<body>
+
+    <!-- input box to hide column when unchecked -->
+    <ul>
+        <li>
+            <input class="nametoggleCheck" type="checkbox" checked> Name</li>
+        <li>
+            <input type="checkbox" class="positiontoggleCheck" checked> Pisition</li>
+        <li>
+            <input type="checkbox" class="officetoggleCheck" checked> Office</li>
+        <li>
+            <input type="checkbox" class="agetoggleCheck" checked> Age</li>
+        <li>
+            <input type="checkbox" class="starttoggleCheck" checked> Start date</li>
+        <li>
+            <input type="checkbox" class="salarytoggleCheck" checked> Salary</li>
+    </ul>
+    <!-- input box to hide column when unchecked end -->
+
+    <!-- table where specific column will get hide -->
+    <table border="0" cellspacing="5" cellpadding="5">
+        <tbody>
+            <tr>
+                <td>Minimum age:</td>
+                <td>
+                    <input type="text" id="min" name="min">
+                </td>
+            </tr>
+            <tr>
+                <td>Maximum age:</td>
+                <td>
+                    <input type="text" id="max" name="max">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table id="example" class="display dataTableShow" border="1" width="100%">
+        <thead>
+            <tr>
+                <th class="width-250"> Name</th>
+                <th class="width-250">Position</th>
+                <th class="width-250">Office</th>
+                <th class="width-250">Age</th>
+                <!-- <th class="width-250">Start date</th>
+                <th class="width-250">Salary</th> -->
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect System Architect System Architect System Architect System Architect System Architect </td>
+                <td>Edinburgh</td>
+                <td>61</td>
+            </tr>
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect System Architect System Architect System Architect System Architect System Architect </td>
+                <td>Edinburgh</td>
+                <td>61</td>
+            </tr>
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect System Architect System Architect System Architect System Architect System Architect </td>
+                <td>Edinburgh</td>
+                <td>61</td>
+            </tr>
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect System Architect System Architect System Architect System Architect System Architect </td>
+                <td>Edinburgh</td>
+                <td>61</td>
+            </tr>
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect System Architect System Architect System Architect System Architect System Architect </td>
+                <td>Edinburgh</td>
+                <td>61</td>
+            </tr>
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect System Architect System Architect System Architect System Architect System Architect </td>
+                <td>Edinburgh</td>
+                <td>61</td>
+            </tr>
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect System Architect System Architect System Architect System Architect System Architect </td>
+                <td>Edinburgh</td>
+                <td>61</td>
+            </tr>
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect System Architect System Architect System Architect System Architect System Architect </td>
+                <td>Edinburgh</td>
+                <td>61</td>
+            </tr>
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect System Architect System Architect System Architect System Architect System Architect </td>
+                <td>Edinburgh</td>
+                <td>61</td>
+            </tr>
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect System Architect System Architect System Architect System Architect System Architect </td>
+                <td>Edinburgh</td>
+                <td>61</td>
+            </tr>
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect System Architect System Architect System Architect System Architect System Architect </td>
+                <td>Edinburgh</td>
+                <td>61</td>
+            </tr>
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect System Architect System Architect System Architect System Architect System Architect </td>
+                <td>Edinburgh</td>
+                <td>61</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- table where specific column will get hide -->
+
+    <!--=== SCRIPT ======-->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- data table js -->
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script>
+        //var for the datatable object
+        var globDataTable;
+
+        var table = $('#example').DataTable({
+            "scrollY": "300px",
+            "scrollX": true
+        });
+
+        function filterGlobal() {
+            $('#example').DataTable().search(
+                $('#global_filter').val(),
+                $('#global_regex').prop('checked'),
+                $('#global_smart').prop('checked')
+            ).draw();
+        }
+
+        function filterColumn(i) {
+            $('#example').DataTable().column(i).search(
+                $('#col' + i + '_filter').val(),
+                $('#col' + i + '_regex').prop('checked'),
+                $('#col' + i + '_smart').prop('checked')
+            ).draw();
+        }
+
+        $(document).ready(function () {
+            //store the datatable object
+            globDataTable = $('#example').DataTable();
+
+            $('input.global_filter').on('keyup click', function () {
+                filterGlobal();
+            });
+
+            $('input.column_filter').on('keyup click', function () {
+                filterColumn($(this).parents('tr').attr('data-column'));
+            });
+        });
+
+        $(".nametoggleCheck").click(function () {
+            var col = globDataTable.column(0);
+            col.visible(!col.visible());
+        })
+        $(".positiontoggleCheck").click(function () {
+            var col = globDataTable.column(1);
+            col.visible(!col.visible());
+        })
+        $(".officetoggleCheck").click(function () {
+            var col = globDataTable.column(2);
+            col.visible(!col.visible());
+        })
+        $(".agetoggleCheck").click(function () {
+            var col = globDataTable.column(3);
+            col.visible(!col.visible());
+        })
+        $(".starttoggleCheck").click(function () {
+            var col = globDataTable.column(4);
+            col.visible(!col.visible());
+        })
+        $(".salarytoggleCheck").click(function () {
+            var col = globDataTable.column(5);
+            col.visible(!col.visible());
+        })
+                     //var for the datatable object
+    </script>
+    <script>
+        $.fn.dataTable.ext.search.push(
+    function( settings, data, dataIndex ) {
+        var min = parseInt( $('#min').val(), 10 );
+        var max = parseInt( $('#max').val(), 10 );
+        var age = parseFloat( data[3] ) || 0; // use data for the age column
+ 
+        if ( ( isNaN( min ) && isNaN( max ) ) ||
+             ( isNaN( min ) && age <= max ) ||
+             ( min <= age   && isNaN( max ) ) ||
+             ( min <= age   && age <= max ) )
+        {
+            return true;
+        }
+        return false;
+    }
+);
+ 
+$(document).ready(function() {
+    var table = $('#example').DataTable();
+     
+    // Event listener to the two range filtering inputs to redraw on input
+    $('#min, #max').keyup( function() {
+        table.draw();
+    } );
+} );
+    </script>
+</body>
+
+</html>

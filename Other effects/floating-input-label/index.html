@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/fontawesome-all.min.js"></script>
+  <title>Hello, world!</title>
+
+
+  <style>
+    
+.floating-input {
+    width: 100%;
+}
+.floating-input label {position: absolute; top: 10px; left: 25px; width: auto;  transition: 0.2s; z-index: -1;}
+.floating-input input {width: 100%; border-radius: 4px; padding: 8px 15px; border: 1px solid #ddd; background: transparent;}
+.floating-input input:focus + label, .floating-input input:valid + label {
+    width: auto !important;
+    background: #fff;
+    top: -8px !important;
+    left: 40px !important;
+    font-size: 12px;
+    padding: 0 10px;
+    color: #1ab1ef;
+    z-index: 2;
+}
+  </style>
+</head>
+
+<body>
+
+
+  <div class="container-fluid">
+    <div class="row mt-5">
+      <div class="col-lg-3">
+        <div class="floating-input">
+          <input required type="text" />
+          <label>Input Box</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>StartUp</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <style type="text/css">
+      .mine{
+  width: 500px;
+  height: 500px;
+  background: #000;
+}
+
+.dragme{
+  width: 300px;
+  cursor: move;
+}
+    </style>
+  </head>
+  <body>
+
+    <div class="mine">
+      <img src="http://www.zpixel.com/staging/test/image.png" class="dragme">
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+    <!--==================== DRAG AND DROP ====================-->
+    <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(".dragme").draggable({
+        containment: ".mine"
+      });
+    </script>
+    <!--==================== DRAG AND DROP ====================-->
+    
+  </body>
+</html>

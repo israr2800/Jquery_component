@@ -1,0 +1,936 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/* font-family: 'Roboto', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+/* font-family: 'Marcellus', serif; */
+
+@supports (-moz-appearance:none) {
+    /* special attributes for mozilla only */
+}
+
+@mixin ul {
+    margin: 0;
+    padding: 0;
+    li {
+        list-style: none;
+    }
+}
+
+@mixin ultop {
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline-block;
+            a {
+                letter-spacing: 1px;
+                font-size: 12px;
+                display: block;
+            }
+        }
+    }
+}
+
+@mixin spacing {
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+@mixin primary {
+    background: #fb7f63;
+    color: #fff;
+}
+
+@mixin gray {
+    background: #f0f1f5;
+}
+
+$primary: #fb7f63;
+$gray: #f4f4fa;
+$secondary: #4034ff;
+$dark: #343a40;
+$white: #fff;
+$border-light: 1px solid rgba(0,
+0,
+0,
+0.08);
+$border-light-white: 1px solid rgba(255,
+255,
+255,
+0.08);
+@mixin text-primary {
+    color: #fb7f63;
+}
+
+@mixin secondary {
+    background: #4034ff;
+    color: #fff;
+}
+
+@mixin text-secondary {
+    color: #4034ff;
+}
+
+@mixin font-sm {
+    font-size: 12px;
+}
+
+@mixin font-md {
+    font-size: 14px;
+}
+
+@mixin font-lg {
+    font-size: 18px;
+}
+
+@mixin font-xl {
+    font-size: 24px;
+}
+
+@mixin font-xxl {
+    font-size: 32px;
+}
+
+@mixin heading {
+    font-weight: 600;
+    margin: 0;
+}
+
+@mixin d-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@mixin shadow {
+    -webkit-box-shadow: 0px 0px 10px -8px #000;
+    -moz-box-shadow: 0px 0px 10px -8px #000;
+    box-shadow: 0px 0px 10px -8px #000;
+}
+
+@mixin font-main {
+    font-family: 'Roboto', sans-serif;
+}
+
+@mixin font-stylish {
+    font-family: 'Marcellus', serif;
+}
+
+@mixin absolute {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+@mixin absolute-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin buttonPrimary {
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    padding: 10px 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    @include primary;
+    outline: none !important;
+    display: block;
+    box-shadow: 0px -1px #ea6b4e;
+    border-top: 1px solid rgb(255 255 255 / 63%);
+    &:focus {
+        box-shadow: 0 0 1px 2px rgba(234, 107, 78, 0.301);
+    }
+    @include focus;
+}
+
+@mixin buttonPrimaryOutline {
+    border-radius: 3px;
+    border: 2px solid $primary;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    background: none;
+    color: #fff;
+    outline: none !important;
+    display: block;
+    box-shadow: 0px -1px #ea6b4e;
+    border-top: 1px solid rgb(255 255 255 / 63%);
+    &:focus {
+        box-shadow: 0 0 1px 2px rgba(234, 107, 78, 0.301);
+    }
+    @include focus;
+}
+
+@mixin buttonSecondary {
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    padding: 10px 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    @include secondary;
+    display: block;
+    box-shadow: 0px -1px #2f21ff;
+    border-top: 1px solid rgb(255 255 255 / 63%);
+    &:focus {
+        box-shadow: 0 0 1px 2px rgba(48, 33, 255, 0.301);
+    }
+    @include focus;
+}
+
+@mixin buttonSecondaryOutline {
+    border-radius: 3px;
+    border: 2px solid $secondary;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    background: none;
+    color: $secondary;
+    outline: none !important;
+    display: block;
+    &:focus {
+        box-shadow: 0 0 1px 2px rgba(48, 33, 255, 0.301);
+    }
+    @include focus;
+}
+
+@mixin focus {
+    transition: .2s ease-in-out;
+    &:active {
+        transform: scale(0.9);
+    }
+}
+
+[focus] {
+    transition: .2s ease-in-out;
+    &:active {
+        transform: scale(0.9);
+    }
+}
+
+.buttonPrimary {
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    padding: 10px 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    background: #fb7f63;
+    color: #fff;
+    outline: none !important;
+    display: block;
+    box-shadow: 0px -1px #ea6b4e;
+    border-top: 1px solid rgb(255 255 255 / 63%);
+    &:hover {
+        color: #f3f3f3;
+    }
+    &:focus {
+        box-shadow: 0 0 1px 2px rgba(234, 107, 78, 0.301);
+    }
+    @include focus;
+}
+
+.buttonPrimaryOutline {
+    border-radius: 3px;
+    border: 2px solid $primary;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    background: none;
+    color: $primary;
+    outline: none !important;
+    display: block;
+    &:focus {
+        box-shadow: 0 0 1px 2px rgba(234, 107, 78, 0.301);
+    }
+    @include focus;
+}
+
+.buttonSecondary {
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    padding: 10px 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    background: #4034ff;
+    color: #fff;
+    outline: none !important;
+    display: block;
+    box-shadow: 0px -1px #2f21ff;
+    border-top: 1px solid rgb(255 255 255 / 63%);
+    &:hover {
+        color: #f3f3f3;
+    }
+    &:focus {
+        box-shadow: 0 0 1px 2px rgba(48, 33, 255, 0.301);
+    }
+    @include focus;
+}
+
+.buttonSecondaryOutline {
+    border-radius: 3px;
+    border: 2px solid $secondary;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    background: none;
+    color: $secondary;
+    outline: none !important;
+    display: block;
+    &:focus {
+        box-shadow: 0 0 1px 2px rgba(48, 33, 255, 0.301);
+    }
+    @include focus;
+}
+
+ ::-webkit-scrollbar {
+    width: 6px !important;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: $dark;
+}
+
+body,
+div,
+ul,
+li,
+a,
+p,
+b,
+strong,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include font-main;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.list-initial li {
+    list-style: initial;
+}
+
+.bg-none {
+    background: none !important;
+}
+
+.bg-primary {
+    background: #fb7f63 !important;
+}
+
+.text-primary {
+    color: #fb7f63 !important;
+}
+
+.bg-secondary {
+    background: #4034ff !important;
+}
+
+.text-secondary {
+    color: #4034ff !important;
+}
+
+.bg-black {
+    background: #343a40 !important;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.bg-yellow {
+    background: #ee9e08 !important;
+}
+
+.text-yellow {
+    color: #ee9e08 !important;
+}
+
+.bg-white {
+    background: #fff !important;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+.bg-red {
+    background: #ff707d !important;
+}
+
+.text-red {
+    color: #e63344 !important;
+}
+
+.bg-gray {
+    background: #f4f4fa !important;
+}
+
+.text-gray {
+    color: #5f5f5f !important;
+}
+
+.letter-spacing-2 {
+    letter-spacing: 6px;
+}
+
+.clear-both {
+    clear: both !important;
+}
+
+.object-cover {
+    width: 100%;
+    object-fit: cover;
+    display: table
+}
+
+.font-700 {
+    font-weight: 700 !important;
+}
+
+.font-600 {
+    font-weight: 600 !important;
+}
+
+.font-500 {
+    font-weight: 500 !important;
+}
+
+.font-400 {
+    font-weight: 400 !important;
+}
+
+.font-300 {
+    font-weight: 300 !important;
+}
+
+.font-stylish {
+    font-family: 'Marcellus', serif;
+}
+
+.border-t-light {
+    border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.border-r-light {
+    border-right: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.border-b-light {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.border-l-light {
+    border-left: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.border-light {
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.min-h-100 {
+    min-height: 100px !important;
+}
+
+.min-h-150 {
+    min-height: 150px !important;
+}
+
+.min-h-200 {
+    min-height: 200px !important;
+}
+
+.min-h-204 {
+    min-height: 204px !important;
+}
+
+.min-h-250 {
+    min-height: 250px !important;
+}
+
+.min-h-300 {
+    min-height: 300px !important;
+}
+
+.max-h-100 {
+    max-height: 100px !important;
+}
+
+.max-h-150 {
+    max-height: 150px !important;
+}
+
+.max-h-200 {
+    max-height: 200px !important;
+}
+
+.max-h-250 {
+    max-height: 250px !important;
+}
+
+.max-h-300 {
+    max-height: 300px !important;
+}
+
+.max-h-350 {
+    max-height: 350px;
+}
+
+.max-h-400 {
+    max-height: 400px;
+}
+
+.max-h-450 {
+    max-height: 450px;
+}
+
+.max-h-500 {
+    max-height: 500px;
+}
+
+.max-h-550 {
+    max-height: 550px;
+}
+
+.max-h-600 {
+    max-height: 600px;
+}
+
+.height-100-vh {
+    height: 100vh;
+}
+
+.w-350px {
+    min-width: 350px;
+    max-width: 350px;
+    width: 350px;
+}
+
+.w-300px {
+    min-width: 300px;
+    max-width: 300px;
+    width: 300px;
+}
+
+.w-200px {
+    min-width: 200px;
+    max-width: 200px;
+    width: 200px;
+}
+
+.w-150px {
+    min-width: 150px;
+    max-width: 150px;
+    width: 150px;
+}
+
+.w-100px {
+    min-width: 100px;
+    max-width: 100px;
+    width: 100px;
+}
+
+.w-50px {
+    min-width: 50px;
+    max-width: 50px;
+    width: 50px;
+}
+
+.w-30px {
+    min-width: 30px;
+    max-width: 30px;
+    width: 30px;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.rounded-btn {
+    border-radius: 40px;
+}
+
+.top {
+    top: 0;
+}
+
+.bottom {
+    bottom: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.left {
+    left: 0;
+}
+
+.font-xs {
+    font-size: 12px !important;
+}
+
+.font-sm {
+    font-size: 14px !important;
+}
+
+.font-md {
+    font-size: 16px !important;
+}
+
+.font-lg {
+    font-size: 18px !important;
+}
+
+.font-xl {
+    font-size: 25px !important;
+}
+
+.font-2x {
+    font-size: 40px !important;
+}
+
+.box-shadow {
+    -webkit-box-shadow: 0px 0px 10px -8px #000;
+    -moz-box-shadow: 0px 0px 10px -8px #000;
+    box-shadow: 0px 0px 10px -8px #000;
+}
+
+.align-center {
+    align-items: center !important;
+}
+
+.d-center {
+    display: grid !important;
+    display: -webkit-grid !important;
+    align-items: center !important;
+}
+
+.d-inline-block {
+    display: inline-block !important;
+}
+
+.outline-none,
+.outline-none:focus {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.pointer {
+    cursor: pointer !important;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.overflow-hidden {
+    overflow: hidden !important;
+}
+
+.overflow-auto {
+    overflow: auto !important;
+}
+
+.overflow-x-auto {
+    overflow-x: auto !important;
+}
+
+.overflow-y-auto {
+    overflow-y: auto !important;
+}
+
+.overflow-x-hidden {
+    overflow-x: hidden !important;
+}
+
+.overflow-y-hidden {
+    overflow-y: hidden !important;
+}
+
+@media (min-width:992px) {
+    .w-lg-100 {
+        width: 100% !important;
+    }
+    .w-lg-75 {
+        width: 75% !important;
+    }
+    .w-lg-50 {
+        width: 50% !important;
+    }
+    .w-lg-25 {
+        width: 25% !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .desktop-none {
+        display: none !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .mobile-none {
+        display: none !important;
+    }
+}
+
+.modal {
+    z-index: 9999999;
+    background: rgba(0, 0, 0, 0.762);
+    .modal-dialog {
+        max-width: 95%;
+    }
+    .modal-content {
+        border-radius: 0;
+        .modal-body {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    }
+    .close {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        font-weight: 300;
+        font-size: 30px;
+        opacity: 1;
+    }
+}
+
+.modalContent {
+    .heading {
+        font-weight: 700;
+        font-size: 22px;
+        color: #343a40;
+    }
+}
+
+button,
+a {
+    outline: none;
+    &:active {
+        outline: none;
+        transform: scale(0.9);
+    }
+}
+
+
+/* input checkbox and radio */
+
+.checkboxLabel {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkboxLabel input[type=checkbox] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkboxLabel input[type=radio] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkboxLabel .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background: #fff;
+    border-radius: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.checkboxLabel.radioLabel .checkmark {
+    border-radius: 50%;
+}
+
+.checkboxLabel:hover input~.checkmark {
+    background-color: #fff;
+}
+
+.checkboxLabel .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkboxLabel input[type=checkbox]:checked~.checkmark:after {
+    display: block;
+}
+
+.checkboxLabel input[type=radio]:checked~.checkmark:after {
+    display: block;
+}
+
+.checkboxLabel .checkmark:after {
+    left: 8px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.checkboxLabel.radioLabel .checkmark:after {
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.checkboxLabel input:checked~.checkmark {
+    background-color: #4169e1;
+}
+
+.checkboxLabel input:checked~.checkmark.success {
+    background-color: #28a745;
+}
+
+.checkboxLabel input:checked~.checkmark.danger {
+    background-color: #dc3545;
+}
+
+.checkboxLabel input:checked~.checkmark.warning {
+    background-color: #ffc107;
+}
+
+.checkboxLabel input:checked~.checkmark.info {
+    background-color: #17a2b8;
+}
+
+.changeColor {
+    background: red;
+    height: 100px;
+    width: 100px;
+}
+
+input:checked~.changeColor {
+    background: yellow !important;
+}
+
+
+/* input checkbox and radio end */
+
+
+/* toggle button */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+/* toggle button end */
+
+
+/* DEFAULT ATTRIBUTE END */

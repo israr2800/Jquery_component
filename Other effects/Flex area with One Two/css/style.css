@@ -1,0 +1,21 @@
+@charset "utf-8";
+@import "../css/bootstrap.min.css";
+@import "../css/font-awesome.min.css";
+body{font-family:'sagar';color:#444;}
+
+@font-face{font-family:'CooperHewitt-Light';src:url(../fonts/CooperHewitt-Light.otf) format('truetype');}
+@font-face{font-family:'Poppins-Regular';src:url(../fonts/Poppins-Regular.ttf) format('truetype');}
+@font-face{font-family:'Poppins-Light';src:url(../fonts/Poppins-Light.ttf) format('truetype');}
+@font-face {font-family: 'sagar';src: url('../fonts/sagar.eot');src: local('sagar'), url('../fonts/sagar.woff') format('woff'), url('../fonts/sagar.ttf') format('truetype');}
+@font-face {font-family: 'OpenSans-Light';src: url('../fonts/OpenSans-Light.eot');src: local('OpenSans-Light'), url('../fonts/OpenSans-Light.woff') format('woff'), url('../fonts/OpenSans-Light.ttf') format('truetype');}
+@font-face {font-family: 'lane_-_narrowregular';src: url('../fonts/LANENAR_-webfont.eot');src: url('../fonts/LANENAR_-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/LANENAR_-webfont.woff') format('woff'),url('../fonts/LANENAR_-webfont.ttf') format('truetype'),url('../fonts/LANENAR_-webfont.svg#lane_-_narrowregular') format('svg');}
+@font-face {font-family: 'raleway_thin-webfont';src: url('../fonts/raleway_thin-webfont.eot');src: local('raleway_thin-webfont'), url('../fonts/raleway_thin-webfont.woff') format('woff'), url('../fonts/raleway_thin-webfont.ttf') format('truetype');}
+@font-face {font-family: 'robotolight';src: url('../fonts/Roboto-Light-webfont.eot');src: local('Roboto-Light-webfont'), url('../fonts/Roboto-Light-webfont.woff') format('woff'), url('../fonts/Roboto-Light-webfont.ttf') format('truetype');}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-thumb{background:#313d4f;-webkit-border-radius:0;border-radius:0}
+::selection {color: #ffffff;background-color: #11b6e5;}
+::-moz-selection {color: #ffffff;background-color: #11b6e5;}
+*{padding:0;margin:0;}
+.nopadding{padding:0px !important; margin:0px !important;}ul,li{padding:0;margin:0;}
+a{color:#2b2f34;text-decoration:none;}
+ul,li{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-family:'Poppins-Light';padding:0;margin:0;font-weight: 400;}

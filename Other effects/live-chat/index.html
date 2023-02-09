@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  
+<!-- chatting process -->
+<div class="chatting-enable">
+  <img src="images/chaticon.png" class="img-fluid" alt="chat icon" />
+</div>
+<div class="chatting-wrapper">
+  <div class="chat-content">
+    <div class="chat-close">x</div>
+    <div class="input-chat">
+      <input type="text" placeholder="Full Name">
+    </div>
+    <div class="input-chat">
+      <input type="text" placeholder="Email Address">
+    </div>
+    <div class="input-chat">
+      <input type="number" placeholder="Mobile Number">
+    </div>
+    <div class="input-chat">
+      <input type="text" placeholder="Subject">
+    </div>
+  </div>
+  <div class="chatbox">
+    <textarea rows="1" placeholder="enter your message..."></textarea>
+    <button class="chat-send" type="button">Send</button>
+  </div>
+</div>
+<!-- chatting process end -->
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- chat script -->
+  <script>
+    $(".chatting-enable").click(function () {
+      $(this).hide();
+      $(".chatting-wrapper").slideToggle()
+    });
+    $(".chat-close").click(function () {
+      $('.chatting-enable').show(1000);
+      $(".chatting-wrapper").slideToggle()
+    });
+  </script>
+  <!-- chat script end -->
+
+</body>
+
+</html>

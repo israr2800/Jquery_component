@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>StartUp</title>
+    <!-- Bootstrap -->
+    <!-- https://s3.envato.com/files/221355785/index.html# -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link href="css/components.css" id="style_components" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+<div class="">
+    <div class="row headerproduct nopadding">
+      <div class="col-md-12">
+        <ul class="lsithead">
+          <li><a href="#" class="openleft"><i class="fa fa-window-restore"></i></a></li>
+          <li><a href="#" class="openleft2"><i class="fa fa-bookmark"></i></a></li>
+          <li><a href="#"><i class="fa fa-bug"></i></a></li>
+          <li><a href="#"><i class="fa fa-database"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="panelleft">
+      <i class="fa fa-times fa-pull-right closeme"></i>
+        <div class="row nopadding clear">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 margin-b10">
+            <div class="under-planel">
+               <a href="#" class="addthis"><img src="images/coler.png" class="img-responsive imgContain imgHeight-100"></a>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 margin-b10">
+            <div class="under-planel">
+                <a href="#" class="addthis2"><img src="images/sleeve.png" class="img-responsive imgContain imgHeight-100"></a>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 margin-b10">
+            <div class="under-planel">
+                <a href="#" class="addthis3"><img src="images/buttons.png" class="img-responsive imgContain imgHeight-100"></a>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 margin-b10">
+            <div class="under-planel">
+                <a href="#" class="addthis4"><img src="images/pocket.png" class="img-responsive imgContain imgHeight-100"></a>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="panelleft2">
+      <i class="fa fa-times fa-pull-right closeme2"></i>
+    </div>
+
+<div class="wrappergrid">
+    <div class="row nopadding">
+        <div class="col-lg-6 col-md-6 col-sm-6 leftChoose">
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 c-product-thumb">
+                  <div>
+                    <img src="images/front.png" class="img-responsive">
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 c-product-thumb">
+                  <div>
+                    <img src="images/2.png" class="img-responsive">
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 c-product-thumb">
+                  <div>
+                    <img src="images/3.png" class="img-responsive">
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 c-product-thumb">
+                  <div>
+                    <img src="images/4.png" class="img-responsive">
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 c-product-thumb">
+                  <div>
+                    <img src="images/4.png" class="img-responsive">
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 c-product-thumb">
+                  <div>
+                    <img src="images/4.png" class="img-responsive">
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 c-product-thumb">
+                  <div>
+                    <img src="images/4.png" class="img-responsive">
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 c-product-thumb">
+                  <div>
+                    <img src="images/4.png" class="img-responsive">
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 addhere mine">
+              <div class="row c-product-gallery-content">
+                <div class="col-md-12 c-zoom"><img src="images/front.png" class="img-responsive" id="myImage" /> </div>
+                <div class="col-md-12 c-zoom"><img src="images/2.png" class="img-responsive" /> </div>
+                <div class="col-md-12 c-zoom"><img src="images/3.png" class="img-responsive" /> </div>
+                <div class="col-md-12 c-zoom"><img src="images/4.png" class="img-responsive" /> </div>
+              </div>
+              <div class="pull-right">
+                <button id="backbtn" onclick="document.getElementById('myImage').src='images/back.png'">Back View</button>
+                <button id="frontbtn" onclick="document.getElementById('myImage').src='images/front.png'">Front View</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Drag image -->
+    <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(".dragme").draggable({
+        containment: ".mine"
+      });
+    </script>
+    <!-- Drag image -->
+    <script src="js/components-shop.js" type="text/javascript"></script>
+    <script src="js/jquery.zoom.min.js" type="text/javascript"></script>
+    <!-- Left Panels -->
+    <script type="text/javascript">
+      // panelleft
+      $(".openleft").click(function(e){
+        e.stopPropagation();
+        $(".panelleft").toggle(500);
+      });
+      $(".openleft").click(function(){
+        $(".panelleft2").hide(500);
+      });
+      $(".closeme").click(function(){
+        $(".panelleft").hide(500);
+      });
+      // panelleft
+      // panelleft2
+      $(".openleft2").click(function(e){
+        e.stopPropagation();
+        $(".panelleft2").toggle(500);
+      });
+      $(".openleft2").click(function(){
+        $(".panelleft").hide(500);
+      });
+      $(".closeme2").click(function(){
+        $(".panelleft2").hide(500);
+      });
+      // panelleft2
+    </script>
+    <!-- Left Panels -->
+    <!-- image add on click -->
+    <script type="text/javascript">
+    $(".addthis").click(function(){
+      $('.addhere').append("<div class='dragme'><img src='images/coler.png' class='imageposi'/></div>");
+    });
+    $(".addthis2").click(function(){
+      $('.addhere').append("<div class='dragme'><img src='images/sleeve.png' class='imageposi2'/></div>");
+    });
+    $(".addthis3").click(function(){
+      $('.addhere').append("<div class='dragme'><img src='images/buttons.png' class='imageposi3'/></div>");
+    });
+    $(".addthis4").click(function(){
+      $('.addhere').append("<div class='dragme'><img src='images/pocket.png' class='imageposi4'/></div>");
+    });
+    </script>
+    <!-- image add on click -->
+  </body>
+</html>

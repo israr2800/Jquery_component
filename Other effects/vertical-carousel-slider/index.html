@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/fontawesome-all.min.js"></script>
+
+    <title>Hello, world!</title>
+
+</head>
+
+<body>
+    <div id="vericalSlider" class="carousel slide vertical" data-ride="carousel" data-interval="false">
+        <ol class="carousel-indicators">
+            <li data-target="#vericalSlider" data-slide-to="0" class="active"></li>
+            <li data-target="#vericalSlider" data-slide-to="1"></li>
+            <li data-target="#vericalSlider" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div>
+                    <h1 class="display-1 text-center">Lorem ipsum dolor sit amet adipisicing</h1>
+                    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div>
+                    <h1 class="display-1 text-center">Inventore omnis odio, dolore culpa atque?</h1>
+                    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div>
+                    <h1 class="display-1 text-center">Lorem ipsum dolor sit</h1>
+                    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left and right controls === DO NOT DELETE THIS ARROWS, CODE WON'T WORK -->
+        <a class="carousel-control-prev" href="#vericalSlider" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#vericalSlider" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/myscript.js"></script>
+
+    <script>
+        function debounce(func, wait, immediate) {
+            var timeout;
+            return function () {
+                var context = this,
+                    args = arguments;
+                var later = function () {
+                    timeout = null;
+                    if (!immediate) func.apply(context, args);
+                };
+                var callNow = immediate && !timeout;
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+                if (callNow) func.apply(context, args);
+            };
+        }
+
+        var slider = document.getElementById("vericalSlider");
+        var onScroll = debounce(function (direction) {
+            //console.log(direction);
+            if (direction == false) {
+                $('.carousel-control-next').click();
+            } else {
+                $('.carousel-control-prev').click();
+            }
+        }, 100, true);
+
+        slider.addEventListener("wheel", function (e) {
+            e.preventDefault();
+            var delta;
+            if (event.wheelDelta) {
+                delta = event.wheelDelta;
+            } else {
+                delta = -1 * event.deltaY;
+            }
+
+            onScroll(delta >= 0);
+        });
+    </script>
+
+</body>
+
+</html>

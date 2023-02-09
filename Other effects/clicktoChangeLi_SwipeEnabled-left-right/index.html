@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script defer src="js/fontawesome-all.min.js"></script>
+
+  <title>Hello, world!</title>
+
+</head>
+
+<body>
+
+  <ul id="page1">
+    <li>
+      1
+    </li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+  </ul>
+
+  <button id="prev">Previous</button>
+  <button id="next">Next</button>
+
+
+  <!-- jquery mobile works with jquery v - 1 & 2 only -->
+  <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <!-- jquery mobile works with jquery v - 1 & 2 only -->
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script>
+
+    // showing first li (by me)
+    $(document).ready(function () {
+      $('ul li:first').addClass('selected');
+    });
+    // showing first li end 
+
+    var $first = $('li:first', 'ul'),
+      $last = $('li:last', 'ul');
+    $("#next, ul li").on('click swipeleft', function () {
+      var $next, $selected = $(".selected");
+
+      $next = $selected.next('li').length > 0 ? $selected.next('li') : $first;
+      $selected.removeClass("selected rotateright");
+      $next.addClass('selected rotateright');
+    });
+
+    $("#prev, ul li").on('click swiperight', function () {
+      var $prev, $selected = $(".selected");
+
+      $prev = $selected.prev('li').length ? $selected.prev('li') : $last;
+      $selected.removeClass("selected");
+      $prev.addClass('selected');
+    });
+  </script>
+
+</body>
+
+</html>

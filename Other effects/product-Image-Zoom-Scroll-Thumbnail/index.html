@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <title>jQuery ElevateZoom-Plus - An image zoom plugin</title>
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox-plus.css" media="screen" />
+</head>
+
+<body>
+    <img id="img_01" style="max-width: 500px; max-height: 300px;" src="images/item1.png" data-zoom-image="images/item1.png" />
+
+    <div id="gal1">
+
+        <a href="#" class="elevatezoom-gallery" data-update="" data-image="images/item1.png" data-zoom-image="images/item1.png">
+            <img id="img_01" src="images/item1.png" width="100" /></a>
+
+        <a href="#" class="elevatezoom-gallery" data-image="images/item2.png" data-zoom-image="images/item2.png"><img id="" src="images/item2.png" width="100" /></a>
+
+        <a href="tester" class="elevatezoom-gallery" data-image="images/item3.png" data-zoom-image="images/item3.png">
+            <img id="" src="images/item3.png" width="100" />
+        </a>
+
+        <a href="tester" class="elevatezoom-gallery" data-image="images/item4.png" data-zoom-image="images/item4.png" class="slide-content"><img id="" src="images/item4.png" width="100" /></a>
+
+    </div>
+
+    <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script> -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox-plus.js"></script>
+    <script type="text/javascript" src="js/jquery.ez-plus.js"></script>
+    <script type="text/javascript" src="js/web.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#zoom_06").ezPlus({
+                zoomType: "inner",
+                debug: true,
+                cursor: "crosshair"
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

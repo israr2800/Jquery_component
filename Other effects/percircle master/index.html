@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>StartUp</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+    <link rel="stylesheet" href="css/percircle.css">
+  </head>
+  <body>
+
+        <div class="clearfix">
+            <div id="bluecircle" data-percent="50" class="big">
+            </div>
+            <div id="bluecircle" data-percent="99" class="big orange">
+            </div>
+            <div id="bluecircle" data-percent="84" class="big green">
+            </div>
+            <div id="bluecircle" data-percent="94" class="big green">
+            </div>
+        </div>
+        <!-- /some colors -->
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+    <script type="text/javascript" src="js/percircle.js"></script>
+    <script type="text/javascript">
+        $(function(){ 
+            $("[id$='circle']").percircle();
+            
+            $("#clock").percircle({
+                perclock: true
+            });
+            
+            $("#custom").percircle({
+                text:"custom",
+                percent: 27
+            });
+        });
+    </script>
+  </body>
+</html>

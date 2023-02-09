@@ -1,0 +1,56 @@
+@charset "utf-8";
+@font-face{font-family: "Poppins-Light"; src:url(../fonts/Poppins-Light.ttf)format("truetype");}
+@font-face{font-family: "Poppins-Regular"; src:url(../fonts/Poppins-Regular.ttf)format("truetype");}
+@font-face{font-family: "Roboto-Light"; src:url(../fonts/Roboto-Light.ttf)format("truetype");}
+@font-face{font-family: "Roboto-Black"; src:url(../fonts/Roboto-Black.ttf)format("truetype");}
+body,div,li,ul,h1,h2,h3,h4,h5,h6{padding:0;margin:0; font-family: "Poppins-Regular";}
+p{font-family: "Poppins-Regular";}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-thumb{background:#313d4f;-webkit-border-radius:0;border-radius:0}
+::selection{color:#ffffff;background-color:#11b6e5;}
+::-moz-selection{color:#ffffff;background-color:#11b6e5;}
+*{padding:0;margin:0;}
+.nopadding{padding:0;margin:0;}
+ul,li{list-style:none;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3,h4,h5,h6{font-weight:400;}
+.margin-t5{margin-top:5px !important;}.margin-t10{margin-top:10px !important;}.margin-t15{margin-top:15px !important;}.margin-t20{margin-top:20px !important;}
+.margin-t30{margin-top:30px !important;}.margin-t40{margin-top:40px !important;}.margin-t50{margin-top:50px !important;}
+.margin-b10{margin-bottom:10px !important;}.margin-b15{margin-bottom:15px !important;}.margin-b20{margin-bottom:20px !important;}
+.margin-b30{margin-bottom:30px !important;}.margin-b40{margin-bottom:40px !important;}.margin-b50{margin-bottom:50px !important;}
+.clear{clear:both !important;}
+
+/*======== NAV BAR ============= */
+.nav-wrapper {background:#444;}
+/*======== NAV BAR ============= */
+.row.nopadding {display: flex; align-items: center; margin: auto;}
+.heading {margin-left: 40%;}
+@media only screen and(min-width: 991px){
+	
+}
+
+@media screen and (max-width: 990px){
+.nav-res-nopadding {padding: 0;}	
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+

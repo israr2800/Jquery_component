@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- https://www.jqueryscript.net/gallery/Lightweight-jQuery-Web-Gallery-with-Thumbnail-Slider-Logos-Gallery.html -->
+<title>jQuery Logos Gallery Demo</title>
+
+<link href="./css/index.css" rel="stylesheet" type="text/css" />
+<!-- <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css"> -->
+</head>
+<body>
+
+<div id="gallery-con">
+	<div class="bannerfullView"></div>
+	<div id="gallery-main">
+		<img src="./images/content/001.jpg" />
+	</div>
+	<div id="gallery-hidden">
+		<img src="./images/content/001.jpg" />
+		<img src="./images/content/002.jpg" />
+		<img src="./images/content/003.jpg" />
+		<img src="./images/content/004.jpg" />
+		<img src="./images/content/005.jpg" />
+		<img src="./images/content/006.jpg" />
+		<img src="./images/content/007.jpg" />
+	</div>
+	<div id="thumbnails">
+		<div id="playtoggle" class="ui-button"><div class="icon icon-pause"></div></div>
+		<div id="left-arrow" class="ui-button"><div class="icon icon-arrow-left"></div></div>
+		<div id="right-arrow" class="ui-button"><div class="icon icon-arrow-right"></div></div>
+		<div id="thumbcon"></div>
+	</div>
+	<div id="progressbar">
+	</div>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script defer src="./js/gallery.js" ></script>
+
+<script>
+	/* banner section mycode */
+	$('.bannerfullView').click(function(){
+     $(this).toggleClass('hideBanner');
+    $('#gallery-con #thumbnails').toggleClass('ShowBanner');
+ })
+ /* banner section mycode end */
+</script>
+
+
+</body>
+</html>

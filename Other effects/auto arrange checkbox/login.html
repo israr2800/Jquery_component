@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+<ul>
+    
+<input type="text" placeholder="name" />
+    <a id="clear" href="javascript:;">Clear items</a>
+<li><label><input type="checkbox" id="one" />One</label></li>
+<li><label><input type="checkbox" id="two" />Two</label></li>
+<li><label><input type="checkbox" id="three" />Three</label></li>
+<li><label><input type="checkbox" id="four" />Four</label></li>
+<li><label><input type="checkbox" id="five" />Five</label></li>
+</ul>
+
+<script src="jquery-3.3.1.min.js"></script>
+
+<script>
+    var list = $("ul");
+    sortItems(list);       
+    var anch = $('#clear');
+$('#clear').click(function(){   
+    var list = $("ul"); $(this).parents().eq(0).find(':checkbox').removeAttr('checked');
+                             sortItems(list);
+});
+function sortItems(list){
+		$(":checkbox").attr("autocomplete", "off");
+     origOrder = list.children();
+    list.on("click", ":checkbox", function() {
+        var i, checked = document.createDocumentFragment(),
+            unchecked = document.createDocumentFragment();
+        for (i = 2; i < origOrder.length; i++) {
+            if (origOrder[i].getElementsByTagName("input")[0].checked) {
+                checked.appendChild(origOrder[i]);
+            } else {
+                unchecked.appendChild(origOrder[i]);
+            }
+        }
+        list.append(checked).append(unchecked);
+    });
+}
+</script>
+
+</body>
+</html>

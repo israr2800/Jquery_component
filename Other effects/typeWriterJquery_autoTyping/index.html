@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery typewrite Plugin Demo</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script type="text/javascript" src="src/typewrite.js"></script>
+   
+    <script>
+        $(document).ready(function(){
+            $('#typewriteText').typewrite({
+                actions: [
+                    {type: 'Hello. '},
+                    {type: '<br>'},
+                    {type: 'Weclome '},
+                    {delay: 1500},
+                    {remove: {num: 1, type: 'stepped'}},
+                    {select: {from: 11, to: 16}},
+                    {delay: 2000},
+                    {remove: {num: 5, type: 'whole'}},
+                    {delay: 300},
+                    {type: 'lcome to `typewrite`. '},
+                    {type: '<br>'},
+                    {type: 'It\'s so easy to setup and use.'}
+                ]
+            });
+        });
+    </script>
+
+<!-- https://www.jqueryscript.net/animation/Simulating-Typing-Deleting-Selecting-Text-With-jQuery-typewrite.html -->
+</head>
+<body>
+<h1>jQuery typewrite Plugin Demo</h1>
+    <div id="typewriteText"></div>
+</body>
+</html>

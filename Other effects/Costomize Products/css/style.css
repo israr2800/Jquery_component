@@ -1,0 +1,64 @@
+@charset "utf-8";
+@import "../css/bootstrap.min.css";
+@import "../css/font-awesome.min.css";
+body{font-family:'sagar';color:#444;}
+
+@font-face{font-family:'CooperHewitt-Light';src:url(../fonts/CooperHewitt-Light.otf) format('truetype');}
+@font-face{font-family:'Poppins-Regular';src:url(../fonts/Poppins-Regular.ttf) format('truetype');}
+@font-face{font-family:'Poppins-Light';src:url(../fonts/Poppins-Light.ttf) format('truetype');}
+@font-face {font-family: 'sagar';src: url('../fonts/sagar.eot');src: local('sagar'), url('../fonts/sagar.woff') format('woff'), url('../fonts/sagar.ttf') format('truetype');}
+@font-face {font-family: 'OpenSans-Light';src: url('../fonts/OpenSans-Light.eot');src: local('OpenSans-Light'), url('../fonts/OpenSans-Light.woff') format('woff'), url('../fonts/OpenSans-Light.ttf') format('truetype');}
+@font-face {font-family: 'lane_-_narrowregular';src: url('../fonts/LANENAR_-webfont.eot');src: url('../fonts/LANENAR_-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/LANENAR_-webfont.woff') format('woff'),url('../fonts/LANENAR_-webfont.ttf') format('truetype'),url('../fonts/LANENAR_-webfont.svg#lane_-_narrowregular') format('svg');}
+@font-face {font-family: 'raleway_thin-webfont';src: url('../fonts/raleway_thin-webfont.eot');src: local('raleway_thin-webfont'), url('../fonts/raleway_thin-webfont.woff') format('woff'), url('../fonts/raleway_thin-webfont.ttf') format('truetype');}
+@font-face {font-family: 'robotolight';src: url('../fonts/Roboto-Light-webfont.eot');src: local('Roboto-Light-webfont'), url('../fonts/Roboto-Light-webfont.woff') format('woff'), url('../fonts/Roboto-Light-webfont.ttf') format('truetype');}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-thumb{background:#313d4f;-webkit-border-radius:0;border-radius:0}
+::selection {color: #ffffff;background-color: #11b6e5;}
+::-moz-selection {color: #ffffff;background-color: #11b6e5;}
+*{padding:0;margin:0;}
+.nopadding{padding:0px !important; margin:0px !important;}ul,li{padding:0;margin:0;}
+a{color:#2b2f34;text-decoration:none;}
+ul,li{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-family:'Poppins-Light';padding:0;margin:0;font-weight: 400;}
+
+.leftChoose .col-md-6>div {border: 1px solid #ddd; margin: 10px; border-radius: 3px; text-align: center;}
+.leftChoose {background: rgba(221, 221, 221, 0.2); padding: 10px; height: 100vh; overflow: hidden; overflow-y: auto !important;}
+.headerproduct {background: #444;}
+.headerproduct i {color: #fff;}
+.lsithead li { display: table-cell;}
+.lsithead li a {padding: 10px 30px; border-right: 1px solid rgba(221, 221, 221, 0.22); display: block;}
+.c-product-thumb {height: auto !important;}
+.panelleft {width: 250px; min-height: 100vh; background: #444; float: left; border-top: 1px solid rgba(221, 221, 221, 0.22);}
+.panelleft2 {width: 250px; min-height: 100vh; background: #444; float: left; border-top: 1px solid rgba(221, 221, 221, 0.22);  display: none;}
+@media screen and (max-width: 767px){
+	.panelleft {display: none;}
+	.panelleft, .panelleft2 {float: none; position: fixed; left: 0;z-index: 66;}
+	.leftChoose .col-md-6 {width: 80px; float: left; padding: 0;}
+	.leftChoose {height: auto;}
+}
+.wrappergrid {display: grid;}
+.closeme, .closeme2 {color: #fff; margin: 15px; font-size: 28px; cursor: pointer;}
+#frontbtn, #backbtn {padding: 5px 10px; border-radius: 30px; border: 0; background: #444; color: #fff; font-size: 12px; outline: 0;}
+#frontbtn:hover, #backbtn:hover {background: #ccc;}
+.under-planel {border: 1px solid #ddd; border-radius: 3px; height: 90px;}
+/*.imageposi {width: 30%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}*/
+.imageposi {width: 20%;
+    position: absolute;
+    top: 0;
+    left: 39.1%;}
+.imageposi2 {width: 12.5%;
+    position: absolute;
+    top: 15.5%;
+    right: 14%;}
+.imageposi3 {width: 6.5%;
+    position: absolute;
+    top: 9.5%;
+    left: 46%;}
+.imageposi4 {width: 15.5%;
+    position: absolute;
+    top: 29.8%;
+    right: 29.7%;}
+
+.dragme{
+  width: 300px;
+  cursor: move;
+}

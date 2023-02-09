@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Fresh Project</title>
+
+    <!-- Bootstrap -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+  .showThis {display: none;}
+</style>
+  </head>
+  <body>
+
+    <select id="theSelect">
+      <option value="">- Select -</option>
+      <option value="Name">Name</option>
+      <option value="Position">Position</option>
+  </select>
+
+  <div class="Name showThis">Name</div>
+<div class="Position showThis">Position</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.2.1.js" type="text/javascript"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+    <script>
+      $("#theSelect").change(function(){  
+       if($(this).val() == 'Name') {
+          $('.Name').show();     
+      } else {
+          $('.Name').hide(); //hides element again
+      }
+      if($(this).val() == 'Position') {
+          $('.Position').show();     
+      } else {
+          $('.Position').hide(); //hides element again
+      }
+    });
+    </script>
+
+  </body>
+</html>

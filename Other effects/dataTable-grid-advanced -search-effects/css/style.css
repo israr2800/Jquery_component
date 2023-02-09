@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+@supports (-moz-appearance:none) {
+    /* special attributes for mozilla only */
+}
+.bg-gray {background: #f5f5f5;}
+.outline-none, .outline-none:hover, .outline-none:focus {outline: none;}
+.text-white {color: #fff;}
+.text-dark {color: #444;}
+.text-black {color: #444;}
+.box-shadow {box-shadow: 10px 10px 24px -16px rgba(0,0,0,0.75);}
+.w-350px {min-width: 350px !important; width: 350px !important;}
+.w-300px {min-width: 300px !important; width: 300px !important;}
+.w-200px {min-width: 200px !important; width: 200px !important;}
+.w-150px {min-width: 150px !important;  width: 150px !important;}
+.w-100px {min-width: 100px !important;  width: 100px !important;}
+.w-50px {min-width: 50px !important; width: 50px !important;}
+.w-30px {min-width: 30px !important; width: 30px !important;}
+.w-100 {width: 100%;}
+.leftPanelGrid {background: #f1f4f8; border-right: 1px solid #b7b7b7; width: 250px;float: left;}
+.clickButton{
+    position: absolute;
+    left: 0;
+    top: 94px;
+    z-index: 999;
+    background: #9493ff !important;
+    height: 40px;
+    color: #fff;
+}
+.autoArrangeUl {max-height: 250px; overflow: auto;}
+.autoArrangeUl li {width: 100%; padding: 5px 10px; border-bottom: 1px solid #ddd; display: flex; align-items: center;}
+.autoArrangeUl li label{width: 100%; margin: 0;}
+.autoArrangeUl li span {margin-left: 10px;}
+@media (min-width:992px){
+    .filterDrop {top: 10px; z-index: 99; }
+    .filterDrop > button {position: absolute; right: 265px; background: #fff !important; color: #000 !important; padding: 3px 5px;}
+    .refreshIcon{position: absolute;color: #9493ff;z-index: 99;right: 400px;margin: 17px 0;}
+}
+@media (max-width:991px){
+    .refreshIcon {position: absolute;z-index: 99;color: #9493ff;top: 4px;left: 126px;}
+}
+
+.dropboxStyle .dropdown-menu.show {font-size: 14px; background: whitesmoke;}
+.dropboxStyle .dropdown-item:hover {background: #fff;}
+.tableLoad {display: none;}
+.leftTableSearch {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.left-bg-gray {
+    background: #eaeaea;
+}
+.dataTables_wrapper {
+    box-shadow: -3px 4px 13px -6px #000;
+}
+.dropdown-menu {
+    top: 15px !important;
+}
+.dropdown-menu:before {
+    content: "";
+    border-bottom: 10px solid #f5f5f5;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: -10px;
+    left: 16px;
+    z-index: 10;
+}
+.dropdown-menu:after {
+    content: "";
+    border-bottom: 12px solid #ccc;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+    position: absolute;
+    top: -12px;
+    left: 14px;
+    z-index: 9;
+}
+.changeSearching .Name, .changeSearching .Position, .changeSearching .Office, .changeSearching .Age, .changeSearching .Start_Date, .changeSearching .Salary {display: none;}
+.changeSearching {
+    position: absolute;
+    z-index: 99;
+    left: 200px;
+    top: 12px;
+    width: 400px;
+}
+.changeSearching select {float: left; width: 150px; font-size: 13px; padding: 3px;}
+.changeSearching table {float: left; width: 250px;}
+.changeSearching table input {
+    border: 1px solid #444 !important;
+    padding: 3px !important;
+    height: 100%;
+    font-size: 13px;
+    border-radius: 0 !important;
+    width: 100%;
+}

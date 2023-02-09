@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Tour Demo</title>
+        
+</head>
+<body>
+
+<!--/// Start of HTML Example ///-->
+
+<h1 data-tour-description="This is the title of the page." data-tour-index="-1">Responsive Web Design Demo</h1>
+<h3>Reference to the original responsive design demo
+    <a href="https://www.w3schools.com/html/html_responsive.asp">here</a>.</h3>
+<div id="locations">
+    <div class="city">
+        <h2>London</h2>
+        <p>London is the capital city of England.</p>
+        <p>It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million
+            inhabitants.</p>
+        <a href="#" data-tour-title="Link Button" class="btn btn-link">Boom!</a>
+    </div>
+
+    <!-- I'm using index -10 here to show this item first. -->
+    <div class="city" data-tour-index="-10" data-tour-title="Card Type" data-tour-description="A card will usually be one of multiple similar type items on a page.">
+        <h2>Paris</h2>
+        <p>Paris is the capital of France.</p>
+        <p>The Paris area is one of the largest population centers in Europe, with more than 12 million inhabitants.</p>
+        <a href="#" data-tour-index="1" data-tour-title="Primary Button" data-tour-description="I need a longer description for what this thing does." class="btn btn-primary">Boomer!</a>
+    </div>
+
+    <div class="city" id="full-city">
+        <h2 data-tour-title="Super Title!" data-tour-description="Obviously this is a title.">Tokyo</h2>
+        <p>Tokyo is the capital of Japan.</p>
+        <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
+        <a href="#" class="btn btn-default">Boomie!</a>
+    </div>
+
+    <div class="city">
+        <h2>New York</h2>
+        <p>The City of New York is the most populous city in the United States.</p>
+        <p>New York is an important center for international diplomacy and has been described as the cultural and
+            financial
+            capital of the world.</p>
+        <a href="#" data-tour-title="Default Button" data-tour-index="2" data-tour-description="This is used the most." class="btn btn-default">Boomieist!</a>
+    </div>
+</div>
+
+<div style="clear:both; padding:20px; text-align: center">
+    <button id="start-tour" class="btn btn-primary">Start Tour</button>
+    &nbsp;
+    <button id="add-city" class="btn btn-default">Add City</button>
+</div>
+
+<!--/// End of HTML Example ///-->
+
+
+<!--/// Start of JavaScript Example ///-->
+
+<!-- Include jQuery 3.x -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+<!-- Include the page tour library -->
+<script src="js/tour.js"></script>
+
+<!-- Instantiate the page tour library -->
+<script>
+  
+</script>
+
+<!-- Just some extra testing functionality -->
+<script>
+  // Instantiate the actual page tour object.
+  var PageTour;
+  try {
+    PageTour = $.fn.PageTour();
+  } catch (e) {
+    console.error('Cannot start page tour: ', e);
+  }
+  // Script to add dynamic "cities" for testing.
+  $('#start-tour').on('click', PageTour.open);
+   // Test after load adding new elements.
+ 
+</script>
+
+<!--/// End of JavaScript Example ///-->
+
+</body>
+</html>

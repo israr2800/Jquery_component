@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="styles/custom.css">
+    <script defer src="scripts/fontawesome-all.min.js"></script>
+
+    <!-- Fancy-File-Uploader -->
+    <link rel="stylesheet" href="styles/fancy_fileupload.css">
+    <!-- Fancy-File-Uploader END -->
+    <title>Hello, world!</title>
+
+    <!-- source site: https://www.jqueryscript.net/form/Fancy-File-Uploader-jQuery.html -->
+
+</head>
+
+<body class="bg-gray">
+
+    <!-- Fancy-File-Uploader -->
+    <input id="demo" type="file" name="files" accept=".jpg, .png, image/jpeg, image/png" multiple>
+    <!-- Fancy-File-Uploader END -->
+    
+</body>
+
+</html>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="scripts/jquery-3.4.1.min.js"></script>
+<script src="scripts/bootstrap.bundle.min.js"></script>
+<script src="scripts/custom.js"></script>
+<!-- Fancy-File-Uploader -->
+<script src="scripts/jquery.ui.widget.js"></script>
+<script src="scripts/jquery.fileupload.js"></script>
+<script src="scripts/jquery.iframe-transport.js"></script>
+<script src="scripts/jquery.fancy-fileupload.js"></script>
+
+<script>
+    $('#demo').FancyFileUpload({
+  params : {
+    action :'fileuploader'
+  },
+  maxfilesize : 1000000
+});
+</script>
+
+<!-- Fancy-File-Uploader end -->
+
+
+</body>
+
+</html>

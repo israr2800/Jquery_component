@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>StartUp</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+    <style type="text/css">
+        .modal-header {position: absolute; top: -7px; right: -10px; z-index: 999999; border: 0;}
+        .modal-header span {background: #000; padding: 5px; width: 40px; color: #fff; font-size: 30px; position: absolute; top: -7px; right: 0px; border-radius: 50%;}
+        .modal-next {position: absolute; top: 48%; right: 10px;}
+        .modal-previous {position: absolute; top: 48%; left: 10px;}
+        .modal-next i {background: rgba(0, 0, 0, 0.79); color: #fff; border-radius: 50%; padding: 10px;}
+        .modal-previous i {background: rgba(0, 0, 0, 0.79); color: #fff; border-radius: 50%; padding: 10px;}
+        .modal-widh-auto {width: auto !important; display: table;}
+    </style>
+  </head>
+  <body>
+<!-- ======== NAV BAR ============= -->
+optional
+<!-- data-title="This is my title" data-caption="Some lovely red flowers" -->
+
+<div class="container">
+   <div class="row">
+    <div class="col-md-12">
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" data-image-id="" data-toggle="modal" data-image="images/profile.png" data-target="#image-gallery">
+                    <img class="img-responsive" src="images/profile.png" alt="" />
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" data-image-id="" data-toggle="modal" data-image="images/profile1.png" data-target="#image-gallery">
+                    <img class="img-responsive" src="images/profile1.png" alt="" />
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" data-image-id="" data-toggle="modal" data-image="images/profile2.png" data-target="#image-gallery">
+                    <img class="img-responsive" src="images/profile2.png" alt="" />
+                </a>
+            </div>
+    </div>
+
+<div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-widh-auto">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+               <!--  <h4 class="modal-title" id="image-gallery-title"></h4> -->
+            </div>
+            <div class="modal-body">
+                <img id="image-gallery-image" class="img-responsive" src="">
+            </div>
+
+                <div class="modal-previous">
+                    <a href="#" id="show-previous-image"><i class="fa fa-backward" aria-hidden="true"></i></a>
+                </div>
+
+                <div class="modal-next">
+                    <a href="#" id="show-next-image"><i class="fa fa-forward" aria-hidden="true"></i></a>
+                </div>
+
+            <!-- <div class="modal-footer">
+
+                <div class="modal-previous">
+                    <a href="#" id="show-previous-image"><i class="fa fa-backward" aria-hidden="true"></i></a>
+                </div>
+
+                <div class="col-md-8 text-justify" id="image-gallery-caption">
+                    (optional) This text will be overwritten by jQuery
+                </div>
+
+                <div class="modal-next">
+                    <a href="#" id="show-next-image"><i class="fa fa-forward" aria-hidden="true"></i></a>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+</div>
+<!-- ======== NAV BAR ============= -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/pop-image.js" type="text/javascript"></script>
+  </body>
+</html>

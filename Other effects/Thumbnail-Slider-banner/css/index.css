@@ -1,0 +1,272 @@
+/* #progressbar {
+  width: 100%;
+  height: 3px;
+  margin-top: -3px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(130, 130, 130, 0.8)), color-stop(90%, rgba(215, 215, 235, 0.85)), color-stop(95%, rgba(225, 225, 255, 0.9)), color-stop(100%, #ffffff));
+  background-image: -webkit-linear-gradient(left, rgba(130, 130, 130, 0.8) 0%, rgba(215, 215, 235, 0.85) 90%, rgba(225, 225, 255, 0.9) 95%, #ffffff 100%);
+  background-image: -moz-linear-gradient(left, rgba(130, 130, 130, 0.8) 0%, rgba(215, 215, 235, 0.85) 90%, rgba(225, 225, 255, 0.9) 95%, #ffffff 100%);
+  background-image: -o-linear-gradient(left, rgba(130, 130, 130, 0.8) 0%, rgba(215, 215, 235, 0.85) 90%, rgba(225, 225, 255, 0.9) 95%, #ffffff 100%);
+  background-image: -ms-linear-gradient(left, rgba(130, 130, 130, 0.8) 0%, rgba(215, 215, 235, 0.85) 90%, rgba(225, 225, 255, 0.9) 95%, #ffffff 100%);
+  background-image: linear-gradient(left, rgba(130, 130, 130, 0.8) 0%, rgba(215, 215, 235, 0.85) 90%, rgba(225, 225, 255, 0.9) 95%, #ffffff 100%);
+  -moz-transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+} */
+
+#gallery-con {
+  width: 100%;
+  height: calc(100vh - 70px);
+  margin: 0 auto 0;
+  padding: 0;
+  position: relative;
+}
+
+#gallery-con #gallery-main {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: -1;
+  height: calc(100vh - 70px);
+  overflow: hidden;
+  right: 0;
+  left: 0;
+}
+
+#gallery-con #gallery-main img {
+  width: 100%;
+  height: calc(100vh - 70px);
+  object-fit: cover;
+  object-position: center;
+}
+
+#gallery-con #gallery-hidden {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  display: none;
+  z-index: -1;
+}
+
+#gallery-con #thumbnails {
+  width: 100%;
+  height: 200px;
+  background: rgba(130, 130, 130, 0.6);
+  z-index: 10;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: .2s ease-in-out;
+}
+
+
+#gallery-con #thumbnails:hover {
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  opacity: 1;
+}
+
+#gallery-con #thumbnails #thumbcon {
+  width: 100%;
+  height: 200px;
+  display: inline-block;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  box-shadow: 0px -9px 13px -11px #000;
+}
+
+#gallery-con #thumbnails #thumbcon .thumb {
+  width: 250px;
+  height: 100%;
+  display: inline;
+  margin: 0;
+  opacity: 1;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+#gallery-con #thumbnails #thumbcon .thumb:hover {
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  opacity: 1;
+  -moz-box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 2px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 2px;
+  -o-box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 2px;
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 2px;
+}
+
+#gallery-con #thumbnails #thumbcon .selected {
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  opacity: 1;
+  -moz-box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 2px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 2px;
+  -o-box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 2px;
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 2px;
+}
+
+#thumbnails #left-arrow {
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: url(../images/spirite.png);
+  background-repeat: no-repeat;
+  background-size: 1000px 2000px;
+  background-position: -669px -36px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  opacity: 1;
+  z-index: 999;
+}
+
+#thumbnails #right-arrow {
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: url(../images/spirite.png);
+  background-repeat: no-repeat;
+  background-size: 1000px 2000px;
+  background-position: -702px -36px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  opacity: 1;
+  z-index: 999;
+}
+
+
+#gallery-con #thumbnails .ui-button:hover {
+  background-color: #1d1d1d;
+}
+
+
+#gallery-con #playtoggle {
+  float: right;
+  background: #f11286;
+}
+
+#gallery-con #thumbnails .icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-image: url(../images/sprites.png);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  z-index: 22;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#gallery-con #thumbnails .icon-play {
+  background-position: 0 0;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#gallery-con #thumbnails .icon-pause {
+  background-position: -32px 0;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#gallery-con #thumbnails .icon-arrow-right {
+  background-position: -64px 0;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#gallery-con #thumbnails .icon-arrow-left {
+  background-position: -96px 0;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.bannerfullView {
+ background: url(../images/spirite.png) no-repeat;
+ background-size: 1000px 2000px;
+ background-position:-814px -32px;
+ width: 40px;
+ height: 40px;
+ position: absolute;
+ left: 50%;
+ margin-left: -20px;
+ bottom: 220px;
+ z-index: 9;
+ cursor: pointer;
+ transition: .2s ease-in-out;
+ animation: arrowDown 1s linear infinite;
+}
+
+.ShowBanner {
+  transition: .2s ease-in-out;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+.hideBanner {
+  transition: .2s ease-in-out;
+  bottom: 20px;
+  background-position: -814px -73px;
+}
+
+@keyframes arrowDown {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  14% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+
+  28% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  42% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+
+  70% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
